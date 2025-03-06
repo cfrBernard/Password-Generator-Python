@@ -10,8 +10,8 @@ def generate_password(length=12, include_uppercase=True, include_numbers=True, i
     if include_symbols:
         characters += string.punctuation
 
-    if length < 4:
-        raise ValueError("The length must be at least 4 to ensure a secure password.")
+    if length < 8:
+        raise ValueError("The length must be at least 8 to ensure a secure password.")
 
     password = ''.join(random.choice(characters) for _ in range(length))
     return password
